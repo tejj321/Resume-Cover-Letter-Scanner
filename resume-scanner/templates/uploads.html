@@ -1,0 +1,25 @@
+<!-- templates/uploads.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uploaded Files</title>
+</head>
+<body>
+    <h1>Uploaded Resumes and Cover Letters</h1>
+    <h2>Resumes:</h2>
+    <ul>
+        {% for resume in resumes %}
+            <li><a href="{{ resume.file_path }}">{{ resume.file_path }}</a></li>
+        {% endfor %}
+    </ul>
+    
+    <h2>Cover Letters:</h2>
+    <ul>
+        {% for cover_letter in cover_letters %}
+            <li><a href="{{ cover_letter.file_path }}">{{ cover_letter.file_path }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
